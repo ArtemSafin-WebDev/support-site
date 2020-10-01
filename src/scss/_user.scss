@@ -1,0 +1,252 @@
+.user {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../img/white-bg.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: 4.5rem;
+    background-size: cover;
+
+    @include breakpoint(mobile) {
+        background-image: url('../img/mobile-bg.jpg');
+    }
+
+    &--video {
+        @include breakpoint(mobile) {
+            background-color: #fff;
+            background-image: none;
+        }
+    }
+}
+
+.user__top-panel {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 4.7rem;
+
+    @include breakpoint(mobile) {
+        align-items: initial;
+        margin-bottom: 3rem;
+        flex-direction: column;
+    }
+}
+
+.user__breadcrumbs {
+    display: flex;
+    align-items: baseline;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.user__breadcrumbs-link {
+    margin-right: 3rem;
+    font-size: 1.6rem;
+    color: #92978c;
+    transition: color 0.2s;
+    &:link,
+    &:visited {
+        color: #92978c;
+    }
+
+    &.active,
+    &:hover {
+        color: var(--primary-color);
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.user__back {
+    margin-left: auto;
+    color: #92978c;
+    font-size: 1.6rem;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-right: 1rem;
+        flex-shrink: 0;
+        fill: currentColor;
+        transform: scaleX(-1);
+    }
+    &:link,
+    &:visited {
+        color: #92978c;
+    }
+
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+.user__heading {
+    font-weight: 400;
+    font-size: 3.6rem;
+    color: var(--primary-color);
+    margin-bottom: 4.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.user__text {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 4rem;
+    color: black;
+    p {
+        margin-bottom: 1.5rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.user__items-list {
+    max-width: 70rem;
+    margin-bottom: 7rem;
+}
+
+.user__items-list-item {
+    margin-bottom: 4rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.user__items-card {
+    display: flex;
+    color: black;
+}
+
+.user__items-card-content {
+    width: 50%;
+    flex-grow: 1;
+    border-top: 1px solid var(--primary-color);
+    padding-top: 2.4rem;
+}
+
+.user__items-card-image {
+    width: 22rem;
+    flex-shrink: 0;
+    height: auto;
+    margin-left: 5.4rem;
+    align-self: flex-start;
+
+    @include breakpoint(mobile) {
+        width: 16rem;
+        margin-left: 3rem;
+    }
+}
+
+.user__items-card-title {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.user__items-card-text {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+}
+
+.user__where-to-get-heading {
+    font-weight: 400;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.user__where-to-get {
+    margin-bottom: 7rem;
+}
+
+.user__where-to-get-heading {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin-bottom: 1.4rem;
+}
+.user__where-to-get-text {
+    font-size: 1.6rem;
+    color: black;
+}
+
+.user__video {
+    margin-top: 7rem;
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 6rem;
+    }
+}
+
+.user__video-card {
+    margin-bottom: 3rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.user__video-card-description {
+    width: 50%;
+    flex-grow: 1;
+    border-top: 2px solid var(--primary-color);
+    padding-top: 3rem;
+}
+
+.user__video-card-preview {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-left: 5.2rem;
+    flex-shrink: 0;
+    width: 42rem;
+    border: 0.3rem solid #92978c;
+    &::after {
+        content: '';
+        padding-bottom: 70%;
+        display: block;
+        width: 100%;
+    }
+
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        @include objectFitCover();
+    }
+
+    @include breakpoint(mobile) {
+        width: 23rem;
+    }
+}
+
+.user__video-card {
+    display: flex;
+}
+
+.user__video-card-title {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+    color: var(--primary-color);
+}
